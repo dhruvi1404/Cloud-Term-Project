@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Auth } from 'aws-amplify';
+import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './LoginForm.css'; // Import the CSS file
 
@@ -18,12 +18,24 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await Auth.signIn(formData.email, formData.password);
-      setMessage('Login successful!');
-      localStorage.setItem('user', JSON.stringify(user)); // Store user data in local storage
-      navigate('/dashboard'); // Redirect to a protected route
+      const requestBody = {
+        email: formData.email,
+        password: formData.password
+      };
+
+      // Send login request to the backend
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/Login`, requestBody);
+      if (response.status === 200) {
+        setMessage('Login successful!');
+        // Store the user data in local storage
+        localStorage.setItem('user', JSON.stringify(response.data));
+        // Redirect to the dashboard or another protected route
+        navigate('/');
+      } else {
+        setMessage('Login failed. Please check your credentials.');
+      }
     } catch (error) {
-      setMessage(error.message || 'An error occurred during login.');
+      setMessage(error.response?.data?.message || 'An error occurred during login.');
     }
   };
 
