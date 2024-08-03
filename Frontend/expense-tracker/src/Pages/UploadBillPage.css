@@ -1,0 +1,46 @@
+.container {
+  text-align: center;
+  display: flex; /* Make the container a flex container */
+  flex-direction: column; /* Arrange elements vertically */
+  align-items: center; /* Align elements horizontally to the center */
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.uploadContainer {
+  margin-bottom: 20px;
+  margin-top: 10px; /* Adjust margin from the top */
+  margin-left: 9%; /* Adjust margin from the left */
+  text-align: center; /* Center align text */
+}
+
+.fileInput {
+  display: block;
+  margin: 0 auto;
+}
+
+.uploadButtonContainer {
+  margin-bottom: 20px;
+  text-align: center; /* Center align button */
+}
+
+.uploadButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.uploadButton:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-top: 10px;
+  color: red;
+}

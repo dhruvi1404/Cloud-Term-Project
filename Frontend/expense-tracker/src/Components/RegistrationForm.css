@@ -1,0 +1,49 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .form-wrapper {
+    width: 400px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the form contents */
+  }
+  
+  .form-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .form-input {
+    width: calc(100% - 24px); /* Adjusted width to accommodate padding */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: block; /* Ensures each form field appears on a new line */
+  }
+  
+  .form-button {
+    width: 150px; /* Adjust the width as needed */
+    margin: 0 auto; /* Center the button horizontally */
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-button:hover {
+    background-color: #0056b3;
+  }
+  

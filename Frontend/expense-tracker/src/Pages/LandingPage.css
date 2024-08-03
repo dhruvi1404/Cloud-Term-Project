@@ -1,0 +1,63 @@
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .navbar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Landing Page styles */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px); /* Adjust for navbar height */
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+  }
+  
+  .image-container {
+    margin-right: 20px; /* Adjust as needed */
+  }
+  
+  .image {
+    width: 400px; /* Adjust image width as needed */
+    height: auto;
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
